@@ -33,7 +33,7 @@ app.config(function ($stateProvider) {
                 url: '/registration',
                 views: {
                     content: {
-                        templateUrl: 'app/registration/registration.html'
+                        templateUrl: 'app/register/registration.html'
                     }
                 }
             })

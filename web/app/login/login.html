@@ -11,48 +11,60 @@ and open the template in the editor.
             <div class="panel panel-primary panel-margin-top-login panel-style">
 
                 <div class="panel-body">
+
                     <div class="row">
                         <div class="col-lg-3">
                             <label>Username:</label>
 
                         </div>
                         <div class="col-lg-9">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="user.username">
                         </div>
                     </div>
+
                     <div class="row row-top-margin">
                         <div class="col-lg-3">
                             <label>Password:</label>
                         </div>
                         <div class="col-lg-9">
-                            <input type="text" class="form-control">
+                            <input type="password" class="form-control" ng-model="user.password">
                         </div>
                     </div>
+
                     <div class="row row-top-margin">
                         <div class="col-lg-3">
                             <label>User Type</label>
                         </div>
                         <div class="col-lg-3">
-                            <input type="radio" name="userType" value="Admin"/> Admin
+                            <input  type="radio" name="userRole" ng-model="user.role" value="Admin">Admin
                         </div>
                         <div class="col-lg-3">
-                            <input type="radio" name="userType" value="user"/>User
+
+                            <input type="radio" name="userRole" ng-model="user.role" value="User"
+                                   ng-checked="true">User
+                            
+                           
                         </div>
                     </div>
+
                     <div class="row row-top-margin">
                         <div class="col-lg-6">
-                            <input type="button" class="btn-success form-control" value="Login">
-                            
+                            <input type="button" class="btn-success form-control" value="Login"
+                                   ng-click="login()">
+
                         </div>
                         <div class="col-lg-6">
-                            <input type="button" class="btn-primary form-control" value="Sing Up">
+                            <input type="button" class="btn-primary form-control" value="Sing Up"
+                                   ng-click="signUp()">
                         </div>
                     </div>
+
                     <div class="row row-top-margin">
                         <div class="col-lg-offset-7 col-lg-5">
                             <a href="#"><b>Forgot Password ?</b></a>
                         </div>
                     </div>
+
                 </div>
 
             </div>

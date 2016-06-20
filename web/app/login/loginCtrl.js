@@ -6,6 +6,21 @@
 
 
 
-app.controller('loginCtrl',function ($scope){
-    alert('hello sir'); 
+app.controller('loginCtrl', function ($scope, $state) {
+//    alert('hello called');
+
+    $scope.signUp = function () {
+
+        alert('registration called');
+
+        $state.go('registration');
+    }
+
+    $scope.login = function () {
+        alert($scope.user.role);
+//        console.log($scope.user.username);
+        console.log($scope.user);
+
+    };
+
 });
