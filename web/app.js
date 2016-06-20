@@ -5,22 +5,30 @@
  */
 
 
-var app=angular.module('myJob',['ui.router']);
+var app = angular.module('myJob', ['ui.router']);
+//
+app.controller('myJobController', ['$scope', function ($scope) {
 
-app.controller('myJobController',['$scope',function ($scope){
-    
-     $scope.clicked = function () {
+        $scope.clicked = function () {
 
             $("#wrapper").toggleClass("toggled");
 
         }
-    
-}]);
+
+    }]);
 
 
 app.config(function ($stateProvider) {
     $stateProvider
-    .state('dashboard', {
+            .state('login', {
+                url: '/login',
+                views: {
+                    content: {
+                        templateUrl: 'app/login/login.html'
+                    }
+                }
+            })
+            .state('dashboard', {
                 url: '/dashboard',
                 views: {
                     header: {templateUrl: "app/header/header.html"},
@@ -48,7 +56,7 @@ app.config(function ($stateProvider) {
                 url: '/services',
                 views: {
                     header: {templateUrl: "app/header/header.html"},
-                   sidebar: {templateUrl: "app/sidebar/sidebar.html"},
+                    sidebar: {templateUrl: "app/sidebar/sidebar.html"},
                     content: {templateUrl: "services.html"}
                 }
             })
@@ -60,7 +68,8 @@ app.config(function ($stateProvider) {
                     content: {templateUrl: "contact.html"}
                 }
             })
-    
-}).run(function ($state){
-     $state.go('dashboard')
+
+}).run(function ($state) {
+    $state.go('login');
+  
 });
