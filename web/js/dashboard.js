@@ -5,11 +5,3 @@
  */
 
 
-var app=angular.module('myJob',['ui.router']);
-
-
-app.config(function ($stateProvider) {
-    
-}).run(function ($state){
-    
-});
