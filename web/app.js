@@ -24,7 +24,16 @@ app.config(function ($stateProvider) {
                 url: '/login',
                 views: {
                     content: {
-                        templateUrl: 'app/login/login.html'
+                        templateUrl: 'app/login/login.html',
+                        controller:'loginCtrl'
+                    }
+                }
+            })
+            .state('registration', {
+                url: '/registration',
+                views: {
+                    content: {
+                        templateUrl: 'app/registration/registration.html'
                     }
                 }
             })
