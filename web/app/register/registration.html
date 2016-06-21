@@ -4,7 +4,8 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<div>
+<form name="registerform" method="post">
+    <div>
     <div class="col-lg-10">
         <div class="panel panel-primary">
             <div class="panel-heading">Registration</div>
@@ -14,36 +15,36 @@ and open the template in the editor.
                         <label>First Name: </label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" class="form-control" name="firstName" ng-model="firstName">
+                        <input type="text" class="form-control" name="firstName" ng-model="register.firstName">
                     </div>
                     <div class="col-lg-2 label-text-align">
                         <label>Last Name: </label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" class="form-control" name="lastName" ng-model="lastName">
+                        <input type="text" class="form-control" name="lastName" ng-model="register.lastName">
                     </div>
                 </div>
 
-                <div class="row row-top-margin" style="text-align: center">
+                <div class="row row-top-margin label-text-align">
                     <div class="col-lg-2 label-text-align">
                         <label>Email ID: </label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="email" class="form-control" name="email" ng-model="email">
+                        <input type="email" class="form-control" ng-model="register.emailID">
                     </div>
                     <div class="col-lg-2 label-text-align">
                         <label>Password: </label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="password" class="form-control" name="password" ng-model="password">
+                        <input type="password" class="form-control" ng-model="register.pass">
                     </div>
                 </div>
-                <div class="row row-top-margin" style="text-align: center">
+                <div class="row row-top-margin">
                     <div class="col-lg-2 label-text-align">
                         <label>Mobile no: </label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="number" class="form-control" name="mobile" ng-model="mobile">
+                        <input type="number" class="form-control" name="mobile" ng-model="register.mobile">
                     </div>
                 </div>
                 <div class="row row-top-margin panel-right-left-margin">
@@ -55,13 +56,13 @@ and open the template in the editor.
                                     <label>City: </label>
                                 </div>
                                 <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="city" ng-model="city">
+                                    <input type="text" class="form-control" name="city" ng-model="register.city">
                                 </div>
                                  <div class="col-lg-2 label-text-align">
                                     <label>District: </label>
                                 </div>
                                 <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="distict" ng-model="distict">
+                                    <input type="text" class="form-control" name="distict" ng-model="register.distict">
                                 </div>
                             </div>
                             <div class="row row-top-margin">
@@ -69,13 +70,13 @@ and open the template in the editor.
                                     <label>State: </label>
                                 </div>
                                 <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="state" ng-model="state">
+                                    <input type="text" class="form-control" name="state" ng-model="register.state">
                                 </div>
                                  <div class="col-lg-2 label-text-align">
                                     <label>Pin Code: </label>
                                 </div>
                                 <div class="col-lg-4">
-                                    <input type="number" class="form-control" name="pincode" ng-model="pincode">
+                                    <input type="number" class="form-control" name="pincode" ng-model="register.pincode">
                                 </div>
                             </div>
                             
@@ -87,10 +88,12 @@ and open the template in the editor.
                         
                     </div>
                     <div class="col-lg-2">
-                        <button type="button" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-success" ng-click="registerUser(register)">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+</form>
+
