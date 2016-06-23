@@ -17,7 +17,7 @@ app.controller('loginCtrl', function ($scope, $state, $http, loginService) {
 
     $scope.login = function () {
         alert($scope.user.role);
-        console.log($scope.user);
+        //   console.log($scope.user);
 //        $http({
 //            method: 'POST',
 //            url: '/GetMyJob/api/checklogin',
@@ -25,6 +25,8 @@ app.controller('loginCtrl', function ($scope, $state, $http, loginService) {
 //        });
 
         loginService.checkLogin($scope.user).success(function (data) {
+
+            console.log(data);
         }).error(function (error) {
         });
 

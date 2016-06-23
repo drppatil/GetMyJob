@@ -5,13 +5,18 @@
  */
 package servlet;
 
+import com.google.gson.Gson;
+import dto.LoginDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import service.LoginService;
+import util.CreateResponse;
 
 /**
  *
@@ -76,12 +81,24 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("inside servlet");
 
-        processRequest(request, response);
+        Gson gson = new Gson();
+        LoginDTO loginDTO = gson.fromJson(request.getReader(), LoginDTO.class);
 
-        System.out.println("inside servlet");
+        LoginService loginService = new LoginService();
+        LoginDTO loginDTO1 = loginService.checkLogin(loginDTO);
 
+        gson = new Gson();
+        String strResult = gson.toJson(CreateResponse.setObjectResponse(loginDTO1));
+        //System.out.println("Data again::"+ strResult);
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.write("" + strResult);
+        out.flush();
+        out.close();
+
+//        System.out.println("The values are  -->>  " + String.valueOf(loginDTO.getUsername()));
+//        processRequest(request, response);
     }
 
     /**

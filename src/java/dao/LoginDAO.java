@@ -3,26 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package service;
+package dao;
 
-import dao.LoginDAO;
 import dto.LoginDTO;
-import javax.ws.rs.GET;
-
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 /**
  *
  * @author eshine
  */
-public class LoginService {
+public class LoginDAO {
 
     public LoginDTO checkLogin(LoginDTO loginDTO) {
-        LoginDAO loginDAO = new LoginDAO();
-        return loginDAO.checkLogin(loginDTO);
 
+        System.out.println("dao ==" + loginDTO.getPassword());
+        return loginDTO;
     }
-
 }
