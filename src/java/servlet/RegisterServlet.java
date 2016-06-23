@@ -65,6 +65,15 @@ public class RegisterServlet extends HttpServlet {
         Gson gson=new Gson();
         RegisterDTO registerDTO = gson.fromJson(request.getReader(), RegisterDTO.class);
         System.out.println("register dto in servlet"+registerDTO.getFirstName());
+         System.out.println("register dto last name =" + registerDTO.getLastName());
+            System.out.println("register dto email name =" + registerDTO.getEmail());
+            System.out.println("register dto pass name =" + registerDTO.getPassword());
+            System.out.println("register dto mobile name =" + registerDTO.getMobile());
+            System.out.println("register dto role name =" + registerDTO.getRole());
+            System.out.println("register dto city name =" + registerDTO.getCity());
+            System.out.println("register dto distri name =" + registerDTO.getDistrict());
+            System.out.println("register dto state name =" + registerDTO.getState());
+            System.out.println("register dto pin name =" + registerDTO.getPincode());
         RegisterService registerService=new RegisterService();
         registerService.addUser(registerDTO);
     }

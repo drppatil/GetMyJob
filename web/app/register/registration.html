@@ -6,94 +6,107 @@ and open the template in the editor.
 -->
 <form name="registerform" method="post">
     <div>
-    <div class="col-lg-10">
-        <div class="panel panel-primary">
-            <div class="panel-heading">Registration</div>
-            <div class="panel-body">
-                <div class="row row-top-margin">
-                    <div class="col-lg-2 label-text-align">
-                        <label>First Name: </label>
+        <div class="col-lg-10">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Registration</div>
+                <div class="panel-body">
+                    <div class="row row-top-margin">
+                        <div class="col-lg-2 label-text-align">
+                            <label>First Name: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="firstName" ng-model="register.firstName">
+                        </div>
+                        <div class="col-lg-2 label-text-align">
+                            <label>Last Name: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" name="lastName" ng-model="register.lastName">
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control" name="firstName" ng-model="register.firstName">
-                    </div>
-                    <div class="col-lg-2 label-text-align">
-                        <label>Last Name: </label>
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control" name="lastName" ng-model="register.lastName">
-                    </div>
-                </div>
 
-                <div class="row row-top-margin label-text-align">
-                    <div class="col-lg-2 label-text-align">
-                        <label>Email ID: </label>
+                    <div class="row row-top-margin label-text-align">
+                        <div class="col-lg-2 label-text-align">
+                            <label>Email ID: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="email" class="form-control" ng-model="register.email">
+                        </div>
+                        <div class="col-lg-2 label-text-align">
+                            <label>Password: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="password" class="form-control" ng-model="register.password">
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <input type="email" class="form-control" ng-model="register.emailID">
+                    <div class="row row-top-margin">
+                        <div class="col-lg-2 label-text-align">
+                            <label>Mobile no: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="number" class="form-control" name="mobile" ng-model="register.mobile">
+                        </div>
+                        <div class="col-lg-2 label-text-align">
+                            <label>Role: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <select Class="form-control" ng-model="register.role">
+                                <option>admin</option>
+                                <option>user</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="col-lg-2 label-text-align">
-                        <label>Password: </label>
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="password" class="form-control" ng-model="register.pass">
-                    </div>
-                </div>
-                <div class="row row-top-margin">
-                    <div class="col-lg-2 label-text-align">
-                        <label>Mobile no: </label>
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="number" class="form-control" name="mobile" ng-model="register.mobile">
-                    </div>
-                </div>
-                <div class="row row-top-margin panel-right-left-margin">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Address</div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-2 label-text-align">
-                                    <label>City: </label>
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="city" ng-model="register.city">
-                                </div>
-                                 <div class="col-lg-2 label-text-align">
-                                    <label>District: </label>
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="distict" ng-model="register.distict">
+                    <div class="row row-top-margin">
+                        <div class="col-lg-offset-1 col-lg-10">
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Address</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>City: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" name="city" ng-model="register.city">
+                                        </div>
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>District: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" name="district" ng-model="register.district">
+                                        </div>
+                                    </div>
+                                    <div class="row row-top-margin">
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>State: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" name="state" ng-model="register.state">
+                                        </div>
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>Pin Code: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="number" class="form-control" name="pincode" ng-model="register.pincode">
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="row row-top-margin">
-                                <div class="col-lg-2 label-text-align">
-                                    <label>State: </label>
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="state" ng-model="register.state">
-                                </div>
-                                 <div class="col-lg-2 label-text-align">
-                                    <label>Pin Code: </label>
-                                </div>
-                                <div class="col-lg-4">
-                                    <input type="number" class="form-control" name="pincode" ng-model="register.pincode">
-                                </div>
-                            </div>
-                            
+                        </div>
+                    </div>
+                    <div class="row row-top-margin label-text-align">
+                        <div class="col-lg-10">
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="button" class="btn btn-success" ng-click="registerUser(register)">Submit</button>
                         </div>
                     </div>
                 </div>
-                <div class="row row-top-margin label-text-align">
-                    <div class="col-lg-10">
-                        
-                    </div>
-                    <div class="col-lg-2">
-                        <button type="button" class="btn btn-success" ng-click="registerUser(register)">Submit</button>
-                    </div>
-                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 </form>
 

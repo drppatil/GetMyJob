@@ -10,32 +10,34 @@ package dto;
  * @author eshine-104
  */
 public class RegisterDTO {
-    
+
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-    private String mobileno;
+    private String mobile;
+    private String role;
     private String city;
     private String district;
     private String state;
     private String pincode;
-    
-    
-    public RegisterDTO(){}
 
-   public RegisterDTO(String firstName, String lastName, String email,String password, String mobile,
-           String city, String district,String state,String pincode){
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.email = email;
-      this.password= password;
-      this.mobileno = mobile;
-      this.city = city;
-      this.district = district;
-      this.state = state;
-      this.pincode = pincode;
-   }
+    public RegisterDTO() {
+    }
+
+    public RegisterDTO(String firstName, String lastName, String email, String password, String mobile,
+            String role, String city, String district, String state, String pincode) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.mobile = mobile;
+        this.role = role;
+        this.city = city;
+        this.district = district;
+        this.state = state;
+        this.pincode = pincode;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -69,12 +71,12 @@ public class RegisterDTO {
         this.password = password;
     }
 
-    public String getMobileno() {
-        return mobileno;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setMobileno(String mobileno) {
-        this.mobileno = mobileno;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getCity() {
@@ -109,6 +111,12 @@ public class RegisterDTO {
         this.pincode = pincode;
     }
 
+    public String getRole() {
+        return role;
+    }
 
-    
+    public void setRole(String role) {
+        this.role = role;
+    }
+
 }
