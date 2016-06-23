@@ -9,7 +9,10 @@ import com.google.gson.Gson;
 import dto.LoginDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -86,7 +89,12 @@ public class LoginServlet extends HttpServlet {
         LoginDTO loginDTO = gson.fromJson(request.getReader(), LoginDTO.class);
 
         LoginService loginService = new LoginService();
-        LoginDTO loginDTO1 = loginService.checkLogin(loginDTO);
+        LoginDTO loginDTO1 = null;
+        try {
+            loginDTO1 = loginService.checkLogin(loginDTO);
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         gson = new Gson();
         String strResult = gson.toJson(CreateResponse.setObjectResponse(loginDTO1));

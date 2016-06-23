@@ -28,6 +28,7 @@ app.controller('loginCtrl', function ($scope, $state, $http, loginService) {
 
             console.log(data);
         }).error(function (error) {
+            
         });
 
     };

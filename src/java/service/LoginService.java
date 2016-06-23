@@ -7,11 +7,8 @@ package service;
 
 import dao.LoginDAO;
 import dto.LoginDTO;
-import javax.ws.rs.GET;
+import java.sql.SQLException;
 
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 /**
  *
@@ -19,7 +16,7 @@ import javax.ws.rs.core.MediaType;
  */
 public class LoginService {
 
-    public LoginDTO checkLogin(LoginDTO loginDTO) {
+    public LoginDTO checkLogin(LoginDTO loginDTO) throws SQLException {
         LoginDAO loginDAO = new LoginDAO();
         return loginDAO.checkLogin(loginDTO);
 

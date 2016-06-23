@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class DataBaseConnection {
 
         static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-        static final String DB_URL = "jdbc:mysql://localhost/HRBASE";
+        static final String DB_URL = "jdbc:mysql://localhost/GETJOB";
 
         //  Database credentials
         static final String USER = "root";
