@@ -20,9 +20,8 @@ public class LoginDAO {
 
     public LoginDTO checkLogin(LoginDTO loginDTO) throws SQLException {
 
-        System.out.println("email-->>>" +loginDTO.getEmail());
-        
-        
+        System.out.println("email-->>>" + loginDTO.getEmail());
+
         DataBaseConnection dbconnection = new DataBaseConnection();
         Connection connection = dbconnection.getConnection();
         String strSelectUser = "select * from User";
@@ -32,13 +31,9 @@ public class LoginDAO {
 
         while (result.next()) {
 
-            
             System.out.println("email->>>" + result.getString("email"));
-       }
-        
-        
-        
-        
+
+        }
         return loginDTO;
     }
 

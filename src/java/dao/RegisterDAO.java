@@ -9,7 +9,7 @@ import dto.RegisterDTO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import utils.DataBaseConnection;
+import util.DataBaseConnection;
 
 /**
  *
