@@ -4,10 +4,13 @@
  * and open the template in the editor.
  */
 
-app.controller('adminProfileCtrl', function ($scope, $state, adminProfileService) {
+app.controller('adminProfileCtrl', function ($scope, $state,
+        adminProfileService, getEmailService) {
+    $scope.myEmail = getEmailService.getEmail();
+    alert('email id ' + $scope.myEmail);
     adminProfileService.getAdminProfile().success(function (data) {
         console.log(data.responseData);
-        $scope.admin=data.responseData;
+        $scope.admin = data.responseData;
     }).error(function (error) {
 
     });

@@ -6,7 +6,7 @@
 
 
 
-app.controller('loginCtrl', function ($scope, $state, $http, loginService) {
+app.controller('loginCtrl', function ($scope, $state, $http, loginService, getEmailService) {
 
 //    $scope.user.role = 'User';
     $scope.signUp = function () {
@@ -17,18 +17,12 @@ app.controller('loginCtrl', function ($scope, $state, $http, loginService) {
 
     $scope.login = function () {
         alert($scope.user.role);
-        //   console.log($scope.user);
-//        $http({
-//            method: 'POST',
-//            url: '/GetMyJob/api/checklogin',
-//            data: angular.toJson($scope.user)
-//        });
-
         loginService.checkLogin($scope.user).success(function (data) {
-
+            $state.go('admin.adminprofile');
+            getEmailService.setEmail(data.responseData.email);
             console.log(data);
         }).error(function (error) {
-            
+
         });
 
     };
