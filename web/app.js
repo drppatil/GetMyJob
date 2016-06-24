@@ -25,7 +25,7 @@ app.config(function ($stateProvider) {
                 views: {
                     content: {
                         templateUrl: 'app/login/login.html',
-                        controller:'loginCtrl'
+                        controller: 'loginCtrl'
                     }
                 }
             })
@@ -34,52 +34,37 @@ app.config(function ($stateProvider) {
                 views: {
                     content: {
                         templateUrl: 'app/register/registration.html',
-                        controller:'registerCtrl'
+                        controller: 'registerCtrl'
                     }
                 }
             })
-            .state('dashboard', {
-                url: '/dashboard',
+            .state('admin', {
+                url: '/admin',
                 views: {
                     header: {templateUrl: "app/header/header.html"},
                     sidebar: {templateUrl: "app/sidebar/sidebar.html"},
-                    content: {templateUrl: "dashboard.html"}
-                }
-            })
-            .state('events', {
-                url: '/events',
-                views: {
-                    header: {templateUrl: "app/header/header.html"},
-                    sidebar: {templateUrl: "app/sidebar/sidebar.html"},
-                    content: {templateUrl: "events.html"}
-                }
-            })
-            .state('about', {
-                url: '/about',
-                views: {
-                    header: {templateUrl: "app/header/header.html"},
-                    sidebar: {templateUrl: "app/sidebar/sidebar.html"},
-                    content: {templateUrl: "about.html"}
-                }
-            })
-            .state('services', {
-                url: '/services',
-                views: {
-                    header: {templateUrl: "app/header/header.html"},
-                    sidebar: {templateUrl: "app/sidebar/sidebar.html"},
-                    content: {templateUrl: "services.html"}
-                }
-            })
-            .state('contact', {
-                url: 'contact',
-                views: {
-                    header: {templateUrl: "app/header/header.html"},
-                    sidebar: {templateUrl: "app/sidebar/sidebar.html"},
-                    content: {templateUrl: "contact.html"}
-                }
-            })
+                    content: {templateUrl: "app/admin/admin.html"},
+                    'inner@admin': {
+                        templateUrl: 'app/admin/adminprofile/adminprofile.html',
+                        controller: 'adminProfileCtrl'
 
+                    },
+                }
+            })
+            .state('admin.adminprofile', {
+                url: '/adminprofile',
+                templateUrl: 'app/admin/adminprofile/adminprofile.html',
+                controller: 'adminProfileCtrl'
+            })
+            .state('admin.postjob', {
+                url: '/postjob',
+                templateUrl: 'app/admin/postjob/postjob.html',
+            })
+            .state('admin.viewusers', {
+                url: '/viewusers',
+                templateUrl: 'app/admin/viewusers/viewusers.html',
+            })
 }).run(function ($state) {
-    $state.go('login');
-  
+    $state.go('admin');
+
 });

@@ -20,4 +20,13 @@
         <url-pattern>/api/addUser</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetAdminProfileServlet</servlet-name>
+        <servlet-class>servlet.GetAdminProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetAdminProfileServlet</servlet-name>
+        <url-pattern>/api/getadminprofile</url-pattern>
+    </servlet-mapping>
+
 </web-app>

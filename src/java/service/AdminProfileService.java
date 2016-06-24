@@ -5,10 +5,21 @@
  */
 package service;
 
+import dao.AdminProfileDAO;
+import dao.LoginDAO;
+import dto.AdminProfileDTO;
+import java.sql.SQLException;
+
 /**
  *
  * @author eshine
  */
 public class AdminProfileService {
-    
+
+    public AdminProfileDTO getAdminProfile() throws SQLException {
+        AdminProfileDAO adminProfileDAO = new AdminProfileDAO();
+        return adminProfileDAO.getAdminProfile();
+
+    }
+
 }

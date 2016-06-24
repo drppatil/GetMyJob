@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<form name="adminprofileform" method="post">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Registration</div>
+                <div class="panel-body">
+                    <div class="row row-top-margin">
+                        <div class="col-lg-2 label-text-align">
+                            <label>First Name: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>{{admin.first_name}}</label>
+                        </div>
+                        <div class="col-lg-2 label-text-align">
+                            <label>Last Name: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>{{admin.last_name}} </label>
+                        </div>
+                    </div>
+
+                    <div class="row row-top-margin label-text-align">
+                        <div class="col-lg-2 label-text-align">
+                            <label>Email ID: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>{{admin.email}} </label>
+                        </div>
+
+                    </div>
+                    <div class="row row-top-margin">
+                        <div class="col-lg-2 label-text-align">
+                            <label>Mobile no: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>{{admin.mobile}} </label>
+                        </div>
+                        <div class="col-lg-2 label-text-align">
+                            <label>Role: </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>{{admin.role}} </label>
+
+                        </div>
+                    </div>
+                    <div class="row row-top-margin">
+                        <div class="col-lg-offset-1 col-lg-10">
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Address</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>City: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label>{{admin.city}} </label>
+                                        </div>
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>District: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label>{{admin.district}} </label>
+                                        </div>
+                                    </div>
+                                    <div class="row row-top-margin">
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>State: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label>{{admin.state}} </label>
+                                        </div>
+                                        <div class="col-lg-2 label-text-align">
+                                            <label>Pin Code: </label>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label>{{admin.pincode}} </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-top-margin label-text-align">
+                        <div class="col-lg-10">
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="button" class="btn btn-success" ng-click="editProfile()">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
