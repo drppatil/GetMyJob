@@ -65,6 +65,6 @@ app.config(function ($stateProvider) {
                 templateUrl: 'app/admin/viewusers/viewusers.html',
             })
 }).run(function ($state) {
-    $state.go('admin');
+    $state.go('login');
 
 });

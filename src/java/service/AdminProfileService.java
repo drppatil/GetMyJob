@@ -16,9 +16,9 @@ import java.sql.SQLException;
  */
 public class AdminProfileService {
 
-    public AdminProfileDTO getAdminProfile() throws SQLException {
+    public AdminProfileDTO getAdminProfile(String email) throws SQLException {
         AdminProfileDAO adminProfileDAO = new AdminProfileDAO();
-        return adminProfileDAO.getAdminProfile();
+        return adminProfileDAO.getAdminProfile(email);
 
     }
 

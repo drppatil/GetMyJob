@@ -6,10 +6,8 @@
 
 app.controller('adminProfileCtrl', function ($scope, $state,
         adminProfileService, getEmailService) {
-    $scope.myEmail = getEmailService.getEmail();
-    alert('email id ' + $scope.myEmail);
-    adminProfileService.getAdminProfile().success(function (data) {
-        console.log(data.responseData);
+    $scope.email = getEmailService.getEmail();
+    adminProfileService.getAdminProfile($scope.email).success(function (data) {
         $scope.admin = data.responseData;
     }).error(function (error) {
 

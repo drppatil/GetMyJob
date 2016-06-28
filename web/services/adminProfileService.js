@@ -6,10 +6,13 @@
 
 app.service('adminProfileService', function ($http) {
 
-    this.getAdminProfile = function () {
+    this.getAdminProfile = function (data) {
         return  $http({
             method: 'POST',
-            url: 'api/getadminprofile'
+            url: 'api/getadminprofile',
+            data:{
+                email:data
+            }
         })
     };
 });

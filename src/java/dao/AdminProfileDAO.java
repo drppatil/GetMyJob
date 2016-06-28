@@ -18,13 +18,13 @@ import util.DataBaseConnection;
  */
 public class AdminProfileDAO {
 
-    public AdminProfileDTO getAdminProfile() throws SQLException {
+    public AdminProfileDTO getAdminProfile(String email) throws SQLException {
         int user_id = 0;
         String emailID = "aaaa@dd.gg";
         AdminProfileDTO adminProfileDTO = new AdminProfileDTO();
         DataBaseConnection dbconnection = new DataBaseConnection();
         Connection connection = dbconnection.getConnection();
-        String selectUserQuery = "SELECT * FROM GETJOB.User where email='" + emailID + "'";
+        String selectUserQuery = "SELECT * FROM GETJOB.User where email='" + email + "'";
         PreparedStatement preparedStatement = connection.prepareStatement(selectUserQuery);
         ResultSet result = preparedStatement.executeQuery();
         while (result.next()) {
