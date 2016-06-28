@@ -28,5 +28,21 @@
         <servlet-name>GetAdminProfileServlet</servlet-name>
         <url-pattern>/api/getadminprofile</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateProfileServlet</servlet-name>
+        <servlet-class>servlet.UpdateProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateProfileServlet</servlet-name>
+        <url-pattern>/api/updateProfile</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetProfileServlet</servlet-name>
+        <servlet-class>servlet.GetProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetProfileServlet</servlet-name>
+        <url-pattern>/api/getProfile</url-pattern>
+    </servlet-mapping>
 
 </web-app>

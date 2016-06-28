@@ -64,6 +64,36 @@ app.config(function ($stateProvider) {
                 url: '/viewusers',
                 templateUrl: 'app/admin/viewusers/viewusers.html',
             })
+            .state('user', {
+                url: '/user',
+                views: {
+                    header: {
+                        templateUrl: "app/header/header.html",
+                    },
+                    sidebar: {
+                        templateUrl: "app/sidebar/sidebar.html",
+                    },
+                    content: {
+                        templateUrl: "app/user/user.html"
+                    },
+                    'inner@user': {
+                        temlateUrl: "app/user/userprofile/userprofile.html",
+                    }
+                }
+            })
+            .state('user.userprofile', {
+                url: '/userprofile',
+                templateUrl: "app/user/userprofile/userprofile.html",
+                controller:"userprofileCtrl"
+            })
+            .state('user.resume', {
+                url: '/resume',
+                templateUrl: "app/user/resume/resume.html",
+            })
+            .state('user.apply_for_job', {
+                url: '/apply_for_job',
+                templateUrl: "app/user/apply_job/apply_for_job.html",
+            })
 }).run(function ($state) {
     $state.go('login');
 

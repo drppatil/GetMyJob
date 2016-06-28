@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<form method="post" name="userProfileForm">
+    <div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{profileDetails.firstName + " " + profileDetails.lastName}} Profile</div>
+            <div class="panel-body">
+                <div class="row" ng-show="!edit">
+                    <div class="row row-top-margin">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>First Name :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                <label>{{profileDetails.firstName}}</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Last Name :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6" style="text-align: left">
+                                <label>{{profileDetails.lastName}}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-top-margin">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Email ID :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                <label>{{profileDetails.email}}</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Role :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                <label>{{profileDetails.role}}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-top-margin">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Mobile :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                <label>{{profileDetails.mobile}}</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row row-top-margin col-lg-offset-1">
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="row row-top-margin">
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>City :</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                                <label>{{profileDetails.city}}</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>District :</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                                <label>{{profileDetails.district}}</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row row-top-margin">
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>State :</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                                <label>{{profileDetails.state}}</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>Pin Code:</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                                <label>{{profileDetails.pincode}}</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show="edit">
+                    <div class="row row-top-margin">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>First Name :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                <input type="text" class="form-control" ng-model="profileDetails.firstName">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Last Name :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6" style="text-align: left">
+                                <input type="text" class="form-control" ng-model="profileDetails.lastName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-top-margin">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Email ID :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+
+                                <input type="text" class="form-control" ng-model="profileDetails.email">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Role :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+
+                                <input type="text" class="form-control" ng-model="profileDetails.role">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-top-margin">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+                                <label>Mobile :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+
+                                <input type="text" class="form-control" ng-model="profileDetails.mobile">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row row-top-margin col-lg-offset-1">
+                        <div class="col-lg-11">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="row row-top-margin">
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>City :</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                                
+                                                <input type="text" class="form-control" ng-model="profileDetails.city">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>District :</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                               
+                                                <input type="text" class="form-control" ng-model="profileDetails.district">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row row-top-margin">
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>State :</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                               
+                                                <input type="text" class="form-control" ng-model="profileDetails.state">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center">
+                                                <label>Pin Code:</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: left">
+                                               
+                                                <input type="text" class="form-control" ng-model="profileDetails.pincode">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-top-margin">
+                    <div class="col-lg-11 text-right" ng-show="!edit">
+                        <button type="button" class="btn btn-success" ng-click="editProfile()">Edit</button>
+                    </div>
+                    <div class="col-lg-11 text-right" ng-show="edit">
+                        <button type="button" class="btn btn-success" ng-click="update(profileDetails)">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
