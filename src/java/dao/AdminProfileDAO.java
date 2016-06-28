@@ -28,6 +28,7 @@ public class AdminProfileDAO {
         PreparedStatement preparedStatement = connection.prepareStatement(selectUserQuery);
         ResultSet result = preparedStatement.executeQuery();
         while (result.next()) {
+            
             user_id = result.getInt("user_id");
             adminProfileDTO.setEmail(result.getString("email"));
             adminProfileDTO.setRole(result.getString("role"));
